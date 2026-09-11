@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARFALL // VERTICAL ASSAULT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hud-header">
+      <div class="brand"><span class="brand-mark">✦</span><span>STARFALL</span><small>VERTICAL ASSAULT</small></div>
+      <div class="mission-status"><i></i><span id="missionStatus">MISSION READY</span></div>
+    </header>
+
+    <section class="game-layout">
+      <div class="screen-frame">
+        <canvas id="gameCanvas" width="480" height="720" aria-label="종스크롤 슈팅 게임 화면"></canvas>
+        <div id="startOverlay" class="overlay">
+          <p class="overline">SECTOR 07 / ORBITAL FRONTIER</p>
+          <h1>STARFALL</h1>
+          <p class="subtitle">VERTICAL ASSAULT</p>
+          <button id="startButton" class="action-button">LAUNCH MISSION</button>
+          <p class="hint">화살표 또는 WASD 이동 · SPACE 발사 · P 일시정지</p>
+        </div>
+        <div id="pauseOverlay" class="overlay is-hidden">
+          <p class="overline">FLIGHT SYSTEM</p>
+          <h2>PAUSED</h2>
+          <button id="resumeButton" class="action-button">RESUME</button>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="stat-block score-block"><span>SCORE</span><strong id="score">0000000</strong></div>
+        <div class="stat-row"><div><span>WAVE</span><strong id="wave">01</strong></div><div><span>HIGH SCORE</span><strong id="highScore">0000000</strong></div></div>
+        <div class="panel-section"><p class="section-title">SHIP STATUS <b></b></p><div class="meter-label"><span>HULL INTEGRITY</span><span id="hullText">100%</span></div><div class="meter"><i id="hullMeter"></i></div><div class="lives" id="lives">● ● ●</div></div>
+        <div class="panel-section"><p class="section-title">WEAPON <b></b></p><div class="weapon-readout"><strong id="weaponLevel">MK-I</strong><span id="weaponText">SINGLE SHOT</span></div><div class="power-dots" id="powerDots"><i class="active"></i><i></i><i></i><i></i></div></div>
+        <div class="panel-section controls"><p class="section-title">FLIGHT CONTROLS <b></b></p><p><kbd>W A S D</kbd> MOVE</p><p><kbd>SPACE</kbd> FIRE</p><p><kbd>P</kbd> PAUSE</p></div>
+        <p class="side-note">DEFEND THE FRONTIER.<br><em>NO SECOND CHANCES.</em></p>
+      </aside>
+    </section>
+    <footer>HTML5 <span>•</span> CSS3 <span>•</span> JAVASCRIPT <span>•</span> SECTOR 07</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

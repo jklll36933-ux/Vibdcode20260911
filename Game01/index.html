@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEON TETRIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="game-header">
+      <div>
+        <p class="eyebrow">ARCADE / 01</p>
+        <h1>NEON <span>TETRIS</span></h1>
+      </div>
+      <div class="status-pill"><i></i><span id="statusText">READY</span></div>
+    </section>
+
+    <section class="game-layout">
+      <div class="board-wrap">
+        <canvas id="gameBoard" width="300" height="600" aria-label="테트리스 게임 보드"></canvas>
+        <div id="overlay" class="board-overlay">
+          <strong id="overlayTitle">READY?</strong>
+          <span id="overlayMessage">START를 눌러 게임을 시작하세요</span>
+          <button id="overlayButton" class="primary-button">START GAME</button>
+        </div>
+      </div>
+
+      <aside class="control-panel">
+        <div class="score-grid">
+          <div class="stat"><span>SCORE</span><strong id="score">000000</strong></div>
+          <div class="stat"><span>LEVEL</span><strong id="level">01</strong></div>
+          <div class="stat"><span>LINES</span><strong id="lines">000</strong></div>
+        </div>
+
+        <div class="next-box">
+          <div class="section-label"><span>NEXT BLOCK</span><b></b></div>
+          <canvas id="nextPiece" width="140" height="110" aria-label="다음 블록"></canvas>
+        </div>
+
+        <div class="controls-box">
+          <div class="section-label"><span>CONTROLS</span><b></b></div>
+          <div class="key-row"><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd><span>MOVE</span></div>
+          <div class="key-row"><kbd>↑</kbd><span>ROTATE</span></div>
+          <div class="key-row"><kbd>SPACE</kbd><span>HARD DROP</span></div>
+          <div class="key-row"><kbd>P</kbd><span>PAUSE</span></div>
+        </div>
+
+        <button id="pauseButton" class="secondary-button" disabled><span>Ⅱ</span> PAUSE</button>
+        <p class="tip">Clear lines. Chase the high score.</p>
+      </aside>
+    </section>
+    <footer>HTML5 / CSS3 / JAVASCRIPT <span>•</span> BUILD YOUR RUN</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
